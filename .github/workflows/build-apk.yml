@@ -1,0 +1,40 @@
+name: Android APK bauen
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+    paths:
+      - 'index.html'
+      - 'android/**'
+      - '.github/workflows/build-apk.yml'
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: JDK 17 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: gradlew ausführbar machen
+        working-directory: android
+        run: chmod +x gradlew
+
+      - name: Debug-APK bauen
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: APK hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: haushaltsbudget-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
