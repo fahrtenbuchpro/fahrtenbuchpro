@@ -29,8 +29,13 @@ Der Workflow lässt sich auch manuell anstoßen: Actions → "Android APK bauen"
 
 ## Lokal bauen (falls Android SDK vorhanden ist)
 
+Die Datei `gradle-wrapper.jar` ist nicht mit im Repo (Binärdatei), daher
+einmalig mit einem lokal installierten Gradle erzeugen, bevor `./gradlew`
+funktioniert:
+
 ```bash
 cd android
+gradle wrapper --gradle-version 8.9 --distribution-type bin
 ./gradlew assembleDebug
 ```
 
