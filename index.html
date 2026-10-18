@@ -202,11 +202,18 @@
     <p>Die App speichert im app-privaten Bereich des Geräts. Optional kann eine
       App-Sperre (PIN/Biometrie) aktiviert werden. Die Android-Systemsicherung
       ist für die App abgeschaltet.</p>
-    <p>Hinweis zu Sicherungsdateien: Die Sicherungsdateien der App (im Ordner
-      „Downloads“ deines Geräts und, wenn aktiviert, in deinem Google Drive)
-      werden von der App derzeit nicht zusätzlich verschlüsselt. Sie sind durch
-      den Schutz deines Geräts bzw. deines Google-Kontos geschützt. Bewahre sie
-      entsprechend sorgfältig auf und teile sie nicht mit Unbefugten.</p>
+    <p>Sicherungsdateien: Die Sicherungsdateien der App (im Ordner „Downloads“
+      deines Geräts und, wenn aktiviert, in deinem Google Drive) sind
+      standardmäßig NICHT von der App verschlüsselt und nur durch den Schutz
+      deines Geräts bzw. deines Google-Kontos geschützt. Unter Einstellungen →
+      „Sicherungen verschlüsseln“ kannst du die Verschlüsselung mit einem
+      eigenen Passwort einschalten (AES-256, Schlüsselableitung per PBKDF2).
+      Das Passwort wird nicht gespeichert und kann nicht zurückgesetzt werden:
+      Ohne Passwort sind verschlüsselte Sicherungen nicht mehr lesbar, auch
+      nicht für den Anbieter. Bereits vorhandene unverschlüsselte Sicherungen
+      bleiben bestehen, ebenso das hochgeladene technische Protokoll und, falls
+      aktiviert, Belegfotos (beide werden nicht verschlüsselt). Bewahre
+      Sicherungen sorgfältig auf und teile sie nicht mit Unbefugten.</p>
 
     <h3>10. Kontakt in Datenschutzfragen</h3>
     <p>Thomas Berndt, E-Mail:
