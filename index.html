@@ -111,7 +111,26 @@
       <li>Halter-/Profildaten für den Fahrtenbuch-Ausdruck (Name, Anschrift,
         Steuernummer) sowie steuerliche Einordnungsangaben.</li>
       <li>Gespeicherte Orte (Bezeichnung, Koordinaten, Adresse).</li>
+      <li>Technisches Protokoll (Logdatei): Zeitpunkte von Verbindungen zum
+        OBD-Adapter, Fahrtbeginn und -ende, Bewegungs- und Aktivitätsmeldungen
+        des Geräts sowie Fehlermeldungen. Es dient der Fehlersuche, bleibt auf
+        deinem Gerät und wird nur weitergegeben, wenn du es selbst teilst
+        (z. B. per E-Mail an den Anbieter).</li>
     </ul>
+    <p>Datensparsamkeit: Der Streckenverlauf wird bewusst vollständig
+      gespeichert, weil er für die Kartenansicht, die Kilometerberechnung und
+      den Nachweis der Fahrten im Fahrtenbuch nötig ist. Automatisch
+      aufgezeichnete Fahrten sind nach ihrem Abschluss zum Schutz der
+      Nachvollziehbarkeit des Fahrtenbuchs gesperrt und lassen sich nicht
+      einzeln löschen; von Hand nachgetragene Fahrten lassen sich löschen. Alle
+      Daten der App löschst du unter Einstellungen → „Alle Daten löschen“ (mit
+      Sicherheitsabfrage). Das löscht die Daten in der App, die automatischen
+      Sicherungen auf dem Gerät, den Sicherungsordner in deinem Google Drive
+      (falls verbunden) und das technische Protokoll. Sicherungsdateien, die du
+      selbst an einem eigenen Ort abgelegt hast, löschst du dort selbst.
+      Alternativ löschst du die Daten durch Deinstallieren der App oder über
+      den Speicher der App in den Android-Einstellungen. Es werden keine Daten
+      für Werbung, Analyse oder Profilbildung erhoben.</p>
 
     <h3>4. Zwecke und Rollen</h3>
     <p>Die Verarbeitung erfolgt zu deinen eigenen Zwecken der
@@ -124,7 +143,16 @@
     <ul>
       <li>Standort (im Vordergrund und im Hintergrund): für die automatische
         Aufzeichnung des Streckenverlaufs während der Fahrt.</li>
-      <li>Bluetooth: für die Verbindung zum OBD-Adapter (Zündungserkennung).</li>
+      <li>Bluetooth: für die Verbindung zum OBD-Adapter (Zündungserkennung),
+        auch zu Adaptern mit Bluetooth Low Energy (BLE) und als gekoppeltes
+        Begleitgerät, damit die App erfährt, wenn der Adapter in Reichweite
+        kommt.</li>
+      <li>Körperliche Aktivität (Aktivitätserkennung): Die App nutzt die
+        Aktivitätserkennung von Android ausschließlich, um zu erkennen, dass du
+        dich in einem Fahrzeug befindest, damit eine Fahrt automatisch
+        aufgezeichnet werden kann. Es werden keine Schritte, Fitness- oder
+        Gesundheitsdaten ausgewertet oder gespeichert. Die Meldung wird nur
+        lokal im technischen Protokoll vermerkt und nicht übertragen.</li>
       <li>Benachrichtigungen: Anzeige des laufenden Aufzeichnungsdienstes.</li>
     </ul>
 
@@ -134,7 +162,10 @@
         Koordinaten bzw. Suchbegriffe an OpenStreetMap-Dienste übertragen
         (Kartenkacheln von OpenStreetMap, Adresssuche „Nominatim“, Umkreissuche
         „Overpass“, Straßenverlauf-Schätzung „OSRM“). Betreiber: OpenStreetMap
-        Foundation, <a href="https://osmfoundation.org">https://osmfoundation.org</a>.</li>
+        Foundation, <a href="https://osmfoundation.org">https://osmfoundation.org</a>
+        (Sitz im Vereinigten Königreich). Dabei wird deine IP-Adresse
+        übermittelt, und die Daten können auf Servern außerhalb der EU
+        verarbeitet werden. Die Übermittlung erfolgt verschlüsselt (HTTPS).</li>
       <li>Standortbestimmung: erfolgt über die Standortdienste von Google
         Play-Diensten auf deinem Gerät.</li>
       <li>Optionale Cloud-Sicherung: Nur wenn du unter Einstellungen „Google
@@ -169,7 +200,13 @@
 
     <h3>9. Datensicherheit</h3>
     <p>Die App speichert im app-privaten Bereich des Geräts. Optional kann eine
-      App-Sperre (PIN/Biometrie) aktiviert werden.</p>
+      App-Sperre (PIN/Biometrie) aktiviert werden. Die Android-Systemsicherung
+      ist für die App abgeschaltet.</p>
+    <p>Hinweis zu Sicherungsdateien: Die Sicherungsdateien der App (im Ordner
+      „Downloads“ deines Geräts und, wenn aktiviert, in deinem Google Drive)
+      werden von der App derzeit nicht zusätzlich verschlüsselt. Sie sind durch
+      den Schutz deines Geräts bzw. deines Google-Kontos geschützt. Bewahre sie
+      entsprechend sorgfältig auf und teile sie nicht mit Unbefugten.</p>
 
     <h3>10. Kontakt in Datenschutzfragen</h3>
     <p>Thomas Berndt, E-Mail:
